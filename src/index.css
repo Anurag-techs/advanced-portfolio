@@ -1,0 +1,127 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: #040711;
+    --cyan-primary: #00f0ff;
+    --blue-primary: #3b82f6;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #040711;
+    color: #f1f5f9;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060d1f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 240, 255, 0.4);
+  }
+}
+
+/* Glassmorphism & Neural Lab Utility Classes */
+.glass-panel {
+  background: rgba(10, 16, 32, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(11, 21, 46, 0.6) 0%, rgba(6, 13, 31, 0.8) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 240, 255, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.25), 0 0 15px 0 rgba(59, 130, 246, 0.15);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 45%, #38bdf8 70%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-cyan-blue {
+  background: linear-gradient(135deg, #00f0ff 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neural-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
+}
+
+.neural-radial {
+  background: radial-gradient(circle at 50% 30%, rgba(0, 240, 255, 0.08) 0%, rgba(59, 130, 246, 0.04) 40%, transparent 70%);
+}
+
+.glow-pill {
+  background: rgba(6, 21, 46, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+  color: #a5f3fc;
+}
+
+.glow-button {
+  background: linear-gradient(135deg, #00f0ff 0%, #0284c7 100%);
+  color: #040711;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.65), 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.ghost-button {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.ghost-button:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  background: rgba(15, 23, 42, 0.9);
+  color: #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
